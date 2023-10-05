@@ -1,5 +1,12 @@
 CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.2]"
 ##############################################
+# config for kcal
+#KPROFILES
+CONFIG_KPROFILES=y
+CONFIG_AUTO_KPROFILES_MSM_DRM=y
+#KCAL COLOR CALIBRATION
+CONFIG_FB_MSM_MDSS_KCAL_CTRL=y
+##############################################
 # defconfig for ASMP
 CONFIG_SMP=y
 CONFIG_HOTPLUG_CPU=y
