@@ -326,7 +326,7 @@
 	quiet-thermal-step {
 		polling-delay-passive = <2000>;
 		polling-delay = <0>;
-		thermal-governor = "step_wise";
+		thermal-governor = "user_space";
 		thermal-sensors = <&pm6125_adc_tm ADC_AMUX_THM2_PU2>;
 		wake-capable-sensor;
 
