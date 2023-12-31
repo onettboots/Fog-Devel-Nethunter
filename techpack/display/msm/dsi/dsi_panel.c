@@ -11,6 +11,10 @@
 #include <linux/pwm.h>
 #include <video/mipi_display.h>
 
+#ifdef CONFIG_POWERSUSPEND
+#include <linux/powersuspend.h>
+#endif
+
 #include "dsi_panel.h"
 #include "dsi_ctrl_hw.h"
 #include "dsi_parser.h"
