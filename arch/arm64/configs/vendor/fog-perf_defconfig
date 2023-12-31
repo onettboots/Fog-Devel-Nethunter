@@ -1,4 +1,11 @@
 CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.1]"
+##############################################
+CONFIG_IRQ_SBALANCE=y
+# SD680/685 4+4
+CONFIG_SBALANCE_EXCLUDE_CPUS="3,7"
+CONFIG_GENERIC_IRQ_EFFECTIVE_AFF_MASK=n
+CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE=y
+####################
 ######################################
 # CONFIG INTERNET
 CONFIG_TCP_CONG_BBR=y
