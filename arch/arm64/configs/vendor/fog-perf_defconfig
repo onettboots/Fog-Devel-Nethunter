@@ -1,4 +1,4 @@
-CONFIG_LOCALVERSION="-Mi680/Fog"
+CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.1]"
 ####################################
 # disable kprobe
 CONFIG_KPROBES=n
