@@ -1,5 +1,8 @@
 CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.1]"
 ##############################################
+CONFIG_ZRAM_ENTROPY=y
+CONFIG_ZRAM_ENTROPY_THRESHOLD=100000
+##############################################
 # defconfig clang lto and thinlto
 CONFIG_LTO_CLANG=y
 CONFIG_THINLTO=y
