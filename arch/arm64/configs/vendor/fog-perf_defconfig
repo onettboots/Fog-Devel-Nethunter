@@ -1,5 +1,9 @@
 CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.1]"
 ##############################################
+# defconfig clang lto and thinlto
+CONFIG_LTO_CLANG=y
+CONFIG_THINLTO=y
+##############################################
 # CONFIG CASS + PELT
 CONFIG_OPTIMIZE_INLINING=y
 CONFIG_JUMP_LABEL=y
