@@ -31,7 +31,6 @@
 #include <linux/hrtimer.h>
 #include <linux/notifier.h>
 #include <linux/fb.h>
-#include <linux/sched/core_ctl.h>
 
 #define ASMP_TAG "AutoSMP: "
 
@@ -338,9 +337,6 @@ static int asmp_notifier_cb(struct notifier_block *nb,
 	return 0;
 }
 
-#ifdef CONFIG_SCHED_CORE_CTL
-extern void disable_core_control(bool disable);
-#endif
 static int __ref asmp_start(void)
 {
 	unsigned int cpu = 0;
@@ -380,9 +376,7 @@ static int __ref asmp_start(void)
 	return ret;
 
 err_out:
-#ifdef CONFIG_SCHED_CORE_CTL
-	disable_core_control(false);
-#endif
+
 	asmp_enabled = 0;
 	return ret;
 }
@@ -419,15 +413,9 @@ static int set_enabled(const char *val,
 
 	ret = param_set_bool(val, kp);
 	if (asmp_enabled) {
-#ifdef CONFIG_SCHED_CORE_CTL
-		disable_core_control(true);
-#endif
 		asmp_start();
 	} else {
 		asmp_stop();
-#ifdef CONFIG_SCHED_CORE_CTL
-		disable_core_control(false);
-#endif
 	}
 	return ret;
 }
