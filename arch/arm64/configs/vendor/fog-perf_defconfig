@@ -1,7 +1,8 @@
 CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.1]"
 ##############################################
-# CONFIG POWERSUSPEND
+# CONFIG POWERSUSPEND & BATTERY
 CONFIG_POWERSUSPEND=y
+CONFIG_BATTERY_SAVER=y
 ##############################################
 # CONFIG FRAME BUFFER
 CONFIG_HAS_IOMEM=y
