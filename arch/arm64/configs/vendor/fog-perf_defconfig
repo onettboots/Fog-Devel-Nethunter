@@ -1,4 +1,4 @@
-CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.3]"
+CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.4]"
 ##############################################
 # defconfig klapse
 CONFIG_KLAPSE=y
