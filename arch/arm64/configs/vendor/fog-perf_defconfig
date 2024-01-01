@@ -1,5 +1,8 @@
 CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.3]"
 ##############################################
+# defconfig klapse
+CONFIG_KLAPSE=y
+##############################################
 # defconfig for ASMP
 CONFIG_SMP=y
 CONFIG_HOTPLUG_CPU=y
