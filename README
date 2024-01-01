@@ -19,7 +19,7 @@ requirements for building and running the kernel, and information about
 the problems which may result by upgrading your kernel.
 
 
-Mbk680-Fog-Rais-Kribo-KSU [2.4.0]
+Fog-Devel-Mod-Kribo-KSU [0.4]
 
 Im using Azure Clang 
 
@@ -27,7 +27,7 @@ https://gitlab.com/Panchajanya1999/azure-clang
 
 If u dont want kernelsu use this one 
 
-git revert b385fd6
+git revert db09d228952a679f17fe098e42e3861911c4c2f6
 
 If u want use Kernelsu ad this first 
 
