@@ -1,5 +1,8 @@
 CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.2]"
 ##############################################
+# config for klapse
+CONFIG_KLAPSE=y
+##############################################
 # config for kcal
 #KPROFILES
 CONFIG_KPROFILES=y
