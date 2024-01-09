@@ -237,7 +237,7 @@ CONFIG_FB=y
 CONFIG_FB_SIMPLE=y
 ####################################
 # disable kprobe and KSU MODULE
-CONFIG_KSU=m
+CONFIG_KSU=N
 CONFIG_KPROBES=n
 CONFIG_HAVE_KPROBES=n
 CONFIG_KPROBE_EVENTS=n
