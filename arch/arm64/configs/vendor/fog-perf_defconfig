@@ -1,4 +1,4 @@
-CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-KSU-[0.5]"
+CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-[1.0.0]"
 ##############################################
 # defconfig klapse
 CONFIG_KLAPSE=y
@@ -237,7 +237,7 @@ CONFIG_FB=y
 CONFIG_FB_SIMPLE=y
 ####################################
 # disable kprobe and KSU MODULE
-CONFIG_KSU=N
+CONFIG_KSU=n
 CONFIG_KPROBES=n
 CONFIG_HAVE_KPROBES=n
 CONFIG_KPROBE_EVENTS=n
