@@ -33,6 +33,7 @@
 #include <linux/fb.h>
 
 #define ASMP_TAG "AutoSMP: "
+#define ASMP_ENABLE true
 
 struct asmp_load_data {
 	u64 prev_cpu_idle;
@@ -50,6 +51,7 @@ static struct notifier_block asmp_nb;
 static bool started = false;
 
 static struct asmp_param_struct {
+	bool enabled;
 	unsigned int delay;
 	bool scroff_single_core;
 	unsigned int max_cpus_bc;
@@ -63,6 +65,7 @@ static struct asmp_param_struct {
 	unsigned int cycle_up;
 	unsigned int cycle_down;
 } asmp_param = {
+	.enabled = ASMP_ENABLE,
 	.delay = 10, // looks like 100 ms good for old device, change it to 10 ms
 	.scroff_single_core = true,
 	.max_cpus_bc = 4, /* Max cpu Big cluster ! */
@@ -79,7 +82,7 @@ static struct asmp_param_struct {
 
 static unsigned int cycle = 0, delay0 = 0;
 static unsigned long delay_jif = 0;
-int asmp_enabled __read_mostly = 0;
+// int asmp_enabled __read_mostly = 0;
 
 static void asmp_online_cpus(unsigned int cpu)
 {
@@ -377,7 +380,7 @@ static int __ref asmp_start(void)
 
 err_out:
 
-	asmp_enabled = 0;
+	asmp_param.enabled = false;
 	return ret;
 }
 
@@ -412,7 +415,7 @@ static int set_enabled(const char *val,
 	int ret;
 
 	ret = param_set_bool(val, kp);
-	if (asmp_enabled) {
+	if (asmp_param.enabled) {
 		asmp_start();
 	} else {
 		asmp_stop();
@@ -425,7 +428,7 @@ static struct kernel_param_ops module_ops = {
 	.get = param_get_bool,
 };
 
-module_param_cb(enabled, &module_ops, &asmp_enabled, 0644);
+module_param_cb(enabled, &module_ops, &asmp_param.enabled, 0644);
 MODULE_PARM_DESC(enabled, "hotplug/unplug cpu cores based on cpu load");
 
 /***************************** SYSFS START *****************************/
@@ -611,6 +614,9 @@ static int __init asmp_init(void) {
 		pr_warn(ASMP_TAG"ERROR, create sysfs kobj");
 
 	pr_info(ASMP_TAG"initialized\n");
+
+	if (asmp_param.enabled)
+        asmp_start();
 
 	return 0;
 }
