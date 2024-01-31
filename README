@@ -19,25 +19,23 @@ requirements for building and running the kernel, and information about
 the problems which may result by upgrading your kernel.
 
 
-Fog-Devel-Mod-Kribo-[1.8.0]
+Fog-Devel-Mod-Kribo-[2.0.2]
 
-Im using Azure Clang 
+Im using android clang 17
 
-https://gitlab.com/Panchajanya1999/azure-clang
-
-If u dont want kernelsu use this one 
-
-git revert db09d228952a679f17fe098e42e3861911c4c2f6
+mkdir kereta-clang && cd kereta-clang && wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r498229b.tar.gz && tar -xf * && ls
 
 If u want use Kernelsu ad this first 
 
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
 
+Then Change CONFIG_KSU=y at defconfig
+
 THen Compile It no need Kprobe because im using manual Hooks
 
 FOr Script Compile u can use this one 
 
-https://telegra.ph/Compile-Kernel-Fog-rais-11-25
+https://telegra.ph/script-fog-compile-01-31
 
 For Download Kernel U can Use This One and search kernel what u need
 
