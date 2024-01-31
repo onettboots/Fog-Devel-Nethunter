@@ -1,4 +1,4 @@
-CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-[2.0.1]"
+CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-[2.0.2]"
 ##############################################
 # defconfig KPROFILES
 CONFIG_KPROFILES=y
