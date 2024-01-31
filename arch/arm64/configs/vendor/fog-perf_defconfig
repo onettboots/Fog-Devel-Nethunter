@@ -6,6 +6,7 @@ CONFIG_FB=y
 CONFIG_FB_SIMPLE=y
 CONFIG_AUTO_KPROFILES=y
 CONFIG_KP_DEFAULT_MODE=2
+CONFIG_AUTO_KPROFILES_FB=y
 ##############################################
 # defconfig klapse
 CONFIG_KLAPSE=y
