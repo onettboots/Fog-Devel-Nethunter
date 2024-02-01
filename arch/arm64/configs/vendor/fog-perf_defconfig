@@ -2,7 +2,6 @@ CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-[2.0.3]"
 ##############################################
 # test defconfig framebuffer
 CONFIG_FB=y
-CONFIG_FB_SIMPLE=y
 ##############################################
 # defconfig klapse
 CONFIG_KLAPSE=y
