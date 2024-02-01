@@ -1,12 +1,5 @@
 CONFIG_LOCALVERSION="-Fog-Devel/Mod-Kribo-[2.0.2]"
 ##############################################
-# defconfig KPROFILES
-CONFIG_KPROFILES=y
-CONFIG_FB=y
-CONFIG_FB_SIMPLE=y
-CONFIG_AUTO_KPROFILES=y
-CONFIG_KP_DEFAULT_MODE=2
-##############################################
 # defconfig klapse
 CONFIG_KLAPSE=y
 ##############################################
